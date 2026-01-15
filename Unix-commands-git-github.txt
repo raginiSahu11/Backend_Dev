@@ -1,20 +1,21 @@
 Q1. Basic Git Workflow
 git init
 git branch -M main
-cat > README.md -->”This is a first file”
+cat > README.md -->â€This is a first fileâ€
 git add README.md
-git commit -m” [Ragini] add: First file”
+git commit -mâ€ [Ragini] add: First fileâ€
 git remote add origin https://github.com/raginiSahu11/Backend_Dev/tree/unix-commands-git-github
 git remote -v
 git push -u origin main
 //Write more in README.md file then
-README.md -->”Readme file”
+README.md -->â€Readme fileâ€
 git add README.md
-git commit -m” [Ragini] add: First change”
+git commit -mâ€ [Ragini] add: First changeâ€
 git status
 ls
 
 Q2. Branching and Merging
+
 git branch feature-a
 git checkout feature-a
 cat > server.js
@@ -85,6 +86,7 @@ git tag -a v1.0 -m "First stable release"
 git remote add origin https://github.com/your-username/advanced-git.git
 git push origin main
 git push origin --tags
+
 
 
 
