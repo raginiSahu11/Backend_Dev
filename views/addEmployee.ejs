@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Employee</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="form-card">
+
+  <h2>Employee Payroll Form</h2>
+
+  <form action="/add" method="POST">
+
+    <!-- Name -->
+    <div class="form-row">
+      <label>Name</label>
+      <input type="text" name="name" required>
+    </div>
+
+    <!-- Profile Image -->
+<div class="avatar-group">
+
+  <label>
+    <input type="radio" name="avatar" value="/avatars/avatar1.svg" required>
+    <img src="/avatars/avatar1.svg">
+  </label>
+
+  <label>
+    <input type="radio" name="avatar" value="/avatars/avatar2.svg">
+    <img src="/avatars/avatar2.svg">
+  </label>
+
+  <label>
+    <input type="radio" name="avatar" value="/avatars/avatar3.svg">
+    <img src="/avatars/avatar3.svg">
+  </label>
+
+  <label>
+    <input type="radio" name="avatar" value="/avatars/avatar4.svg">
+    <img src="/avatars/avatar4.svg">
+  </label>
+
+</div>
+
+    <!-- Gender -->
+    <div class="form-row">
+      <label>Gender</label>
+      <div class="radio-group">
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+      </div>
+    </div>
+
+    <!-- Department -->
+    <div class="form-row">
+      <label>Department</label>
+      <div class="checkbox-group">
+        <input type="checkbox" name="department[]" value="HR"> HR
+        <input type="checkbox" name="department[]" value="Sales"> Sales
+        <input type="checkbox" name="department[]" value="Finance"> Finance
+        <input type="checkbox" name="department[]" value="Engineer"> Engineer
+        <input type="checkbox" name="department[]" value="Others"> Others
+      </div>
+    </div>
+
+    <!-- Salary -->
+    <div class="form-row">
+      <label>Salary</label>
+      <select name="salary" required>
+        <option value="">Select Salary</option>
+        <option value="10000">10000</option>
+        <option value="20000">20000</option>
+        <option value="30000">30000</option>
+        <option value="40000">40000</option>
+      </select>
+    </div>
+
+    <!-- Joining Date -->
+    <div class="form-row">
+      <label>Start Date</label>
+      <input type="date" name="joiningDate" required>
+    </div>
+
+    <!-- Notes -->
+    <div class="form-row">
+      <label>Notes</label>
+      <textarea name="notes"></textarea>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <button type="button" class="btn-cancel" onclick="window.location='/'">Cancel</button>
+      <button type="submit" class="btn-submit">Submit</button>
+      <button type="reset" class="btn-reset">Reset</button>
+    </div>
+
+  </form>
+
+</div>
+
+</body>
+</html>
+
+

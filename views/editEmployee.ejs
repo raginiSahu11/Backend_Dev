@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Employee</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="form-card">
+
+  <h2>Edit Employee</h2>
+
+  <form action="/update/<%= emp.id %>" method="POST">
+
+    <!-- Name -->
+    <div class="form-row">
+      <label>Name</label>
+      <input type="text" name="name" value="<%= emp.name %>" required>
+    </div>
+
+    <!-- Profile Image -->
+    <div class="form-row">
+      <label>Profile Image</label>
+
+      <div class="avatar-group">
+
+        <label>
+          <input type="radio" name="avatar"
+                 value="/avatars/avatar1.svg"
+                 <%= emp.avatar === "/avatars/avatar1.svg" ? "checked" : "" %> >
+          <img src="/avatars/avatar1.svg">
+        </label>
+
+        <label>
+          <input type="radio" name="avatar"
+                 value="/avatars/avatar2.svg"
+                 <%= emp.avatar === "/avatars/avatar2.svg" ? "checked" : "" %> >
+          <img src="/avatars/avatar2.svg">
+        </label>
+
+        <label>
+          <input type="radio" name="avatar"
+                 value="/avatars/avatar3.svg"
+                 <%= emp.avatar === "/avatars/avatar3.svg" ? "checked" : "" %> >
+          <img src="/avatars/avatar3.svg">
+        </label>
+
+        <label>
+          <input type="radio" name="avatar"
+                 value="/avatars/avatar4.svg"
+                 <%= emp.avatar === "/avatars/avatar4.svg" ? "checked" : "" %> >
+          <img src="/avatars/avatar4.svg">
+        </label>
+
+      </div>
+    </div>
+
+    <!-- Gender -->
+    <div class="form-row">
+      <label>Gender</label>
+
+      <div class="radio-group">
+        <input type="radio" name="gender" value="Male"
+          <%= emp.gender === "Male" ? "checked" : "" %> > Male
+
+        <input type="radio" name="gender" value="Female"
+          <%= emp.gender === "Female" ? "checked" : "" %> > Female
+      </div>
+    </div>
+
+    <!-- Department -->
+    <div class="form-row">
+      <label>Department</label>
+
+      <div class="checkbox-group">
+
+        <input type="checkbox" name="department[]" value="HR"
+          <%= emp.department.includes("HR") ? "checked" : "" %> > HR
+
+        <input type="checkbox" name="department[]" value="Sales"
+          <%= emp.department.includes("Sales") ? "checked" : "" %> > Sales
+
+        <input type="checkbox" name="department[]" value="Finance"
+          <%= emp.department.includes("Finance") ? "checked" : "" %> > Finance
+
+        <input type="checkbox" name="department[]" value="Engineer"
+          <%= emp.department.includes("Engineer") ? "checked" : "" %> > Engineer
+
+        <input type="checkbox" name="department[]" value="Others"
+          <%= emp.department.includes("Others") ? "checked" : "" %> > Others
+
+      </div>
+    </div>
+
+    <!-- Salary -->
+    <div class="form-row">
+      <label>Salary</label>
+      <input type="number" name="salary" value="<%= emp.basicSalary %>" required>
+    </div>
+
+    <!-- Joining Date -->
+    <div class="form-row">
+      <label>Start Date</label>
+      <input type="date" name="joiningDate" value="<%= emp.joiningDate %>" required>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <button type="button" class="btn-cancel" onclick="window.location='/'">Cancel</button>
+      <button type="submit" class="btn-submit">Update</button>
+    </div>
+
+  </form>
+
+</div>
+
+</body>
+</html>
+

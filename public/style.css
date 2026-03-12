@@ -1,0 +1,216 @@
+/* ============================= */
+/* GENERAL BODY STYLING */
+/* ============================= */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* ============================= */
+/* FORM CARD CONTAINER */
+/* ============================= */
+
+.form-card {
+  width: 850px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* ============================= */
+/* FORM ROW LAYOUT */
+/* ============================= */
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  width: 150px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs, Select, Textarea */
+.form-row input[type="text"],
+.form-row input[type="number"],
+.form-row input[type="date"],
+.form-row select,
+.form-row textarea {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ============================= */
+/* AVATAR GROUP */
+/* ============================= */
+
+.avatar-group {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.avatar-group input[type="radio"] {
+  display: none;
+}
+
+.avatar-group img {
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  padding: 5px;
+  background: #f8f8f8;
+  transition: 0.2s ease;
+}
+
+.avatar-group input[type="radio"]:checked + img {
+  border: 3px solid #3f51b5;
+  transform: scale(1.05);
+}
+
+/* Avatar image style */
+.avatar-group img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+/* Highlight selected avatar */
+.avatar-group input[type="radio"]:checked + img {
+  border: 3px solid #007bff;
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* RADIO & CHECKBOX GROUP */
+/* ============================= */
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ============================= */
+/* TEXTAREA */
+/* ============================= */
+
+textarea {
+  height: 90px;
+  resize: none;
+}
+
+/* ============================= */
+/* BUTTON GROUP */
+/* ============================= */
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn-cancel,
+.btn-submit,
+.btn-reset {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-cancel {
+  background-color: #ccc;
+}
+
+.btn-submit {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.btn-reset {
+  background-color: #777;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #4cae4c;
+}
+
+.btn-reset:hover {
+  background-color: #555;
+}
+
+/* ============================= */
+/* TABLE STYLING (INDEX PAGE) */
+/* ============================= */
+
+table {
+  width: 95%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+}
+
+table th {
+  background-color: #3f51b5;
+  color: white;
+  padding: 12px;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Avatar in table */
+table img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+/* ============================= */
+/* ADD EMPLOYEE BUTTON */
+/* ============================= */
+
+a {
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #3f51b5;
+  color: white;
+  border-radius: 4px;
+}
+
+a:hover {
+  background-color: #2f3c8f;
+}
+

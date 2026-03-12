@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Payroll System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h2>Employee Payroll System</h2>
+
+<div style="text-align:center; margin-bottom:20px;">
+    <a href="/add">Add New Employee</a>
+</div>
+
+<table border="1">
+
+    <tr>
+        <th>Avatar</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Joining Date</th>
+        <th>Basic Salary</th>
+        <th>Net Salary</th>
+        <th>Actions</th>
+    </tr>
+
+    <% if (employees.length === 0) { %>
+        <tr>
+            <td colspan="8" style="text-align:center;">
+                No Employees Added Yet
+            </td>
+        </tr>
+    <% } %>
+
+    <% for(let i = 0; i < employees.length; i++) { %>
+        <tr>
+
+            <td>
+                <img 
+                    src="<%= employees[i].avatar %>" 
+                    width="50" 
+                    height="50"
+                    style="border-radius:50%;">
+            </td>
+
+            <td><%= employees[i].name %></td>
+
+            <td><%= employees[i].gender %></td>
+
+            <td><%= employees[i].department %></td>
+
+            <td><%= employees[i].joiningDate %></td>
+
+            <td>₹ <%= employees[i].basicSalary %></td>
+
+            <td>₹ <%= employees[i].netSalary %></td>
+
+            <td>
+                <a href="/edit/<%= employees[i].id %>">Edit</a>
+                <a href="/delete/<%= employees[i].id %>">Delete</a>
+            </td>
+
+        </tr>
+    <% } %>
+
+</table>
+
+</body>
+</html>
+
